@@ -1,0 +1,11 @@
+id,symbol,name,image,total_supply,max_supply
+bitcoin,btc,Bitcoin,https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1547033579,21000000.0,21000000.0
+ethereum,eth,Ethereum,https://assets.coingecko.com/coins/images/279/large/ethereum.png?1595348880,120211284.999274,
+ripple,xrp,XRP,https://assets.coingecko.com/coins/images/44/large/xrp-symbol-white-128.png?1605778731,99988501123.0,100000000000.0
+solana,sol,Solana,https://assets.coingecko.com/coins/images/4128/large/solana.png?1640133422,555286963.547684,
+okb,okb,OKB,https://assets.coingecko.com/coins/images/4463/large/WeChat_Image_20220118095654.png?1642471050,235957685.3,300000000.0
+arbitrum,arb,Arbitrum,https://assets.coingecko.com/coins/images/16547/large/photo_2023-03-29_21.47.00.jpeg?1680097630,10000000000.0,10000000000.0
+optimism,op,Optimism,https://assets.coingecko.com/coins/images/25244/large/Optimism.png?1660904599,4294967296.0,4294967296.0
+elrond-erd-2,egld,MultiversX,https://assets.coingecko.com/coins/images/12335/large/egld-token-logo.png?1673490885,25860072.0,31415926.0
+boba-network,boba,Boba Network,https://assets.coingecko.com/coins/images/20285/large/BOBA.png?1636811576,500000000.0,500000000.0
+gmd-protocol,gmd,GMD,https://assets.coingecko.com/coins/images/28088/large/gmd.png?1676044809,80000.0,80000.0

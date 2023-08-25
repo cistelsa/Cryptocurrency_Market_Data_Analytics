@@ -1,0 +1,22 @@
+Para seleccionar el top 10 de criptomonedas para nuestro proyecto de inversión personal, procedemos a realizar un preanalisis profundo sobre su comportamiento,
+1. Diversificaremos el top 10 entre Bajo Riesgo (5) 50%, riego medio (3) 30% y alto riesgo (2) 20% restante
+2. Para selecionar las monedas de bajo riesgo nos centramos en su capitalización de mercado, sus movimientos en volumen diario y como es a largo plazo revisaremos el proyecto que respalda la criptomoneda y si no es BTC revisaremos su comportamiento de correlación respecto al valor de la moneda principal 
+3. Para seleccionar la de riesgo medio revisaremos criptomonedas las cuales son de metaverso y videojuegos, Blockchains de capa 2, monedas de yiel farm finanzas
+4. Para seleccionar las monedas de alto riesgo nos vamos a revisar la capitalización de mercado que no supere los 50millones, miramos que suministro tiene y el mercado totalmente diluido, revisaremos el volumen de moviemientos diarios, que proyecto soporta la criptomoneda
+
+Top de monedas seleccionadas:
+1. Bitcoin (BR-1) - Es la moneda principal por lo mismo de menos riesgo y es obligatoria para nuestro análisis
+2. ETH (BR-2) - Está ubicada en la segunda mejor moneda en capitalización de mercado, pero aparte de todo esto tiene un ecosistema demasiado amplio que da funcionamiento a través de su red a muchas criptomonedas, blockchains, su poder no ha llegado a límite así que es la segunda de menos riesgo
+3. XRP (BR-3) - Si bien estubo pasando un proceso judicial con la SEC, esta crypto tiene muchas posibilidades de remontar su retroceso para el próximo ciclo alcista, ya que es una moneda que comercian bancos muy importantes
+4. SOL (BR-4) - Es una blockchain de capa 1 con una infraestructura muy especial ya que sus procesos son bastante rápidos y de comisiones demasiado bajas, su ecosistema sigue creciendo y salen cada vez más aplicaciones interesantes para inversión está desarrollado en lenguaje RUST
+5. OKB (BR-5) - Es la moneda de gobernabilidad del Exchange OKX el cual tiene buenas métricas que apuntan a ser la segunda casa de cambios de crypto más grande
+6. ARB (RM-1) - Es la blockchain de capa 2 más importante luego de lograr una segunda capa para el ecosistema ethereum con comisiones bajas y proceso muy rápido
+7. OP (RM-2) - Es la segunda blockchain capa 2 más importante, muy similar a ARB maneja comisiones bajas y rápidez
+8. EGLD (RM-3) - Multiversx, es una crypto enfocada en los multiversos, videojuegos, metaversos del ecosistema crypto, aunque no es la única lleva un poco de ventaja y su crecimiento se ha visto en medio del ciclo bajista.
+9. Boba (RA-1) - Red capa 2 de alta velocidad en crecimiento, se usa un analisis a través de métricas importantes 
+10. GMD (RA-2) - Es un Token de Yield Farming optimizado con plataforma de agregación de otra aplicaciones, tiene muy bajo suministro, puede llegar muy lejos en el ciclo alsista
+
+Extraer la información de cada una de ellas y luego tener en cuenta los siguientes parametros para un buen análisis y para determinar que tipo de inversión se hace:
+1. Saber en que ciclo nos encontramos si es alcista o bajista, y en que periodo del ciclo este analisis de acuerdo al histórico de cliclos bajistas y alcistas
+2. Realizar una correlación respecto al precio del BTC ya que es la moneda principal y debe comportarse muy similar para tener una buena inversión
+3. 

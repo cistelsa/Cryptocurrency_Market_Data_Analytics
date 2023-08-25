@@ -1,0 +1,6 @@
+id_halving,cryptocurrency_id,timestamp,previous_blocks,previous_reward,new_reward
+0,bitcoin,2012-11-28,210000,50.0,25.0
+1,bitcoin,2016-07-09,420000,25.0,12.5
+2,bitcoin,2020-05-11,630000,12.5,6.25
+3,bitcoin,2024-04-07,840000,6.25,3.12
+4,bitcoin,2028-03-15,1050000,3.12,1.56
