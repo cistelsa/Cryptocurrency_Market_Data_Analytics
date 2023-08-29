@@ -1,6 +1,6 @@
 ![Análisis del mercado de criptomonedas](source/img/banner_proyecto.jpg)
 
-## Análisis del mercado de criptomonedas
+# Análisis del mercado de criptomonedas
 
 Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosamente seleccionadas para evaluar su potencial de inversión. A continuación, proporcionamos una descripción más detallada de cada criptomoneda, así como la razón por la que fue seleccionada para su análisis. 🚀
 
@@ -52,7 +52,7 @@ Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosam
 </p>
 <br>
 
-## **Mapa del proyecto**
+# **Mapa del proyecto**
 
 | Carpeta                   | Función                   | Recurso           | Video
 |:--------------------------|:----------------------------------------------:|:-------------:|:-------------
@@ -110,32 +110,32 @@ Realizamos una exhaustiva limpieza de los datos para prepararlos para su normali
 
 Para complementar nuestros datos, llevamos a cabo una investigación exhaustiva sobre las fuentes de información disponibles en el mercado de criptomonedas. Después de un análisis minucioso, encontramos que CryptoCompare es la fuente que proporciona la información más completa de forma gratuita. Sin embargo, solo pudimos recopilar información detallada para Bitcoin y Ethereum, ya que necesitábamos datos sobre la oferta circulante en cada fecha para nuestro análisis.
 
-## Normalización de Datos 📑
+## Normalización de Tablas 📑
 
 Luego, normalizamos las tablas preparándolas para su posterior carga en una base de datos en Azure SQL. Finalmente, generamos ocho archivos CSV listos para ser migrados. Estos archivos representan los datos normalizados para precios, información social, desarrolladores e historial de rango, fecha, bitcoin halvings, suministro circulante, criptomonedas.
 <br>
-
-
+<br>
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/b5f79c74-fccb-44aa-8e54-7cbd850c8080
 
-> Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)
+> Antes de cualquier acción a normalizar tablas siempre hacemos primero un esquema de como podemos hacerlo de la forma más satisfactoria y óptima. <br> - *Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)*
 
 ## Carga en Azure SQL (SQL Server) ☁️
 
 El proceso de carga se realizó en Microsoft Fabric utilizando Azure SQL Server y Data Factory. Creamos los cuadernos de extracción en Microsoft Azure Databricks y los almacenamos en nuestro Data Lake. Con Data Factory, configuramos Dataflow para transferir los archivos CSV al servidor de Azure SQL utilizando Power Query.
-
+<br>
+<br>
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bd5fa622-97b2-4a90-9cb4-51bbbe10834c
 
 
-> ☝️ Podemos ver de forma rápida como Dataflow usa Power Query para leer los archivos csv y luego después de asignar el tipo de columna a cada uno, procedemos a enviarlos a Azure SQL por medio de autenticación en este caso básica server, puerto, usuario, contraseña.
+> ☝️ Podemos ver de forma rápida como Dataflow usa Power Query para leer los archivos csv y luego después de asignar el tipo de columna a cada uno, procedemos a enviarlos a Azure SQL por medio de autenticación en este caso básica server, puerto, usuario, contraseña. <br> - *Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)*
 
 También automatizamos aún más el proceso mediante la creación de un Data Pipeline que ejecuta automáticamente los trabajos necesarios, incluyendo la ejecución de scripts SQL para establecer relaciones, claves primarias y foráneas.
-
-
+<br>
+<br>
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bc239611-2851-442c-8cb7-3e555c2b8e3a
 
 
-> ☝️ Muy similar a Airflow o cron jobs, Data Pipeline automatiza los procesos que están en los notebooks, Dataflow o datos externos, también aprovechamos su funcionalidad y cargamos unos scripts SQL de forma remota conectandonos a Azure SQL.
+> ☝️ Muy similar a Airflow o cron jobs, Data Pipeline automatiza los procesos que están en los notebooks, Dataflow o datos externos, también aprovechamos su funcionalidad y cargamos unos scripts SQL de forma remota conectandonos a Azure SQL. <br> - *Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)*
 
 ---
 
