@@ -144,5 +144,7 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 
 Este proyecto de ingeniería de datos es una pieza fundamental para nuestro análisis de inversión en criptomonedas a mediano y largo plazo. Los datos limpios y normalizados nos proporcionan una base sólida para nuestras futuras investigaciones y decisiones de inversión. 🚀
 
+
+## EDA
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/5288937e-6d7c-4731-a47e-f210db0750aa
 #### 
