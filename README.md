@@ -115,13 +115,15 @@ Luego, normalizamos las tablas preparándolas para su posterior carga en una bas
 
 <video src="source/img/normalizar-tablas.mp4" controls title="Title"></video>
 
+
 > Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)
 
 ## Carga en Azure SQL (SQL Server) ☁️
 
 El proceso de carga se realizó en Microsoft Fabric utilizando Azure SQL Server y Data Factory. Creamos los cuadernos de extracción en Microsoft Azure Databricks y los almacenamos en nuestro Data Lake. Con Data Factory, configuramos Dataflow para transferir los archivos CSV al servidor de Azure SQL utilizando Power Query.
 
-<video src="source/img/csv_to_sql.mp4" controls title="Title"></video>
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bd5fa622-97b2-4a90-9cb4-51bbbe10834c
+
 
 > ☝️ Podemos ver de forma rápida como Dataflow usa Power Query para leer los archivos csv y luego después de asignar el tipo de columna a cada uno, procedemos a enviarlos a Azure SQL por medio de autenticación en este caso básica server, puerto, usuario, contraseña.
 
