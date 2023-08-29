@@ -72,7 +72,7 @@ Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosam
 | sql/script_decimal_type.sql | Script para manejar varios decimales              |
 | sql/script_primary_foreign_key.sql | Script para crear claves foraneas y primarias              |
 | .gitignore                | Archivos que ignoramos cargar en github                   |
-| Análisis_exploratorio_de_datos_(EDA).ipynb | EDA realizado en PySpark a través de Microsoft Fabric | [![Análisis_exploratorio_de_datos_(EDA).ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pX64SoHDioP9rqaU5PdZTqqKGg6WvIQD?usp=sharing) |
+| Análisis_exploratorio_de_datos_(EDA).ipynb | EDA realizado en PySpark a través de Microsoft Fabric | [![Análisis_exploratorio_de_datos_(EDA).ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pX64SoHDioP9rqaU5PdZTqqKGg6WvIQD?usp=sharing) | [Video](#eda) |
 | ETL_cm_coingecko_beta.ipynb | ETL Api de Coingecko |
 | ETL_cm_cryptocompare_beta.ipynb | ETL Api de Crypto Compare |
 | table_normalization.ipynb | Normalización de tablas para SQL |
