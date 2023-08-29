@@ -46,8 +46,10 @@ Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosam
 
 >#### Este repositorio proporciona un análisis en profundidad de cada una de estas criptomonedas, lo que ayudará en la toma de decisiones informadas sobre inversiones en el mercado de criptomonedas. Esperamos que esta información sea valiosa para su estrategia de inversión. 📈📊
 
-<img src="source/img/banner_mapa_proyecto.png" style="float:right" width="400px"/>
 <br>
+<p align="right">
+<img src="source/img/banner_mapa_proyecto.png" width="400px"/>
+</p>
 <br>
 
 ## **Mapa del proyecto**
