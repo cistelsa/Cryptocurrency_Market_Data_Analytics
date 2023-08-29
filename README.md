@@ -113,9 +113,7 @@ Para complementar nuestros datos, llevamos a cabo una investigación exhaustiva 
 Luego, normalizamos las tablas preparándolas para su posterior carga en una base de datos en Azure SQL. Finalmente, generamos ocho archivos CSV listos para ser migrados. Estos archivos representan los datos normalizados para precios, información social, desarrolladores e historial de rango, fecha, bitcoin halvings, suministro circulante, criptomonedas.
 <br>
 
-https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/blob/main/source/img/normalizar-tablas.mp4
-
-https://user-images.githubusercontent.com/53548707/206768670-0f259fa4-b920-412c-9a6b-614779a07c4f.mp4
+<video src="source/img/normalizar-tablas.mp4" controls title="Title"></video>
 
 > Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)
 
@@ -123,7 +121,7 @@ https://user-images.githubusercontent.com/53548707/206768670-0f259fa4-b920-412c-
 
 El proceso de carga se realizó en Microsoft Fabric utilizando Azure SQL Server y Data Factory. Creamos los cuadernos de extracción en Microsoft Azure Databricks y los almacenamos en nuestro Data Lake. Con Data Factory, configuramos Dataflow para transferir los archivos CSV al servidor de Azure SQL utilizando Power Query.
 
-source/img/csv_to_sql.mp4
+<video src="source/img/csv_to_sql.mp4" controls title="Title"></video>
 
 > ☝️ Podemos ver de forma rápida como Dataflow usa Power Query para leer los archivos csv y luego después de asignar el tipo de columna a cada uno, procedemos a enviarlos a Azure SQL por medio de autenticación en este caso básica server, puerto, usuario, contraseña.
 
