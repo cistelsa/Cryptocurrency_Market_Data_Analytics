@@ -75,7 +75,7 @@ Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosam
 | Análisis_exploratorio_de_datos_(EDA).ipynb | EDA realizado en PySpark a través de Microsoft Fabric | [![Análisis_exploratorio_de_datos_(EDA).ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pX64SoHDioP9rqaU5PdZTqqKGg6WvIQD?usp=sharing) | [Video](#eda) |
 | ETL_cm_coingecko_beta.ipynb | ETL Api de Coingecko |
 | ETL_cm_cryptocompare_beta.ipynb | ETL Api de Crypto Compare |
-| table_normalization.ipynb | Normalización de tablas para SQL |
+| table_normalization.ipynb | Normalización de tablas para SQL | | [Video](#normalización-de-tablas-)|
 <br>
 
 >#### El proceso de EDA está capturado en Colab, puedes ver como funciona PySpark, pandas y matplotlib juntos, sin olvidar que es necesario Java y Hadoop para que funcione sobre el almacenamiento y procesamiento de datos distribuido, puedes ver nuestro análisis y a su vez puedes ver como se hace el montaje de Spark sobre google colab.
