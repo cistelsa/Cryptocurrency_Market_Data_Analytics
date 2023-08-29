@@ -113,7 +113,8 @@ Para complementar nuestros datos, llevamos a cabo una investigación exhaustiva 
 Luego, normalizamos las tablas preparándolas para su posterior carga en una base de datos en Azure SQL. Finalmente, generamos ocho archivos CSV listos para ser migrados. Estos archivos representan los datos normalizados para precios, información social, desarrolladores e historial de rango, fecha, bitcoin halvings, suministro circulante, criptomonedas.
 <br>
 
-<video src="source/img/normalizar-tablas.mp4" controls title="Title"></video>
+
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/b5f79c74-fccb-44aa-8e54-7cbd850c8080
 
 > Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)
 
@@ -121,13 +122,16 @@ Luego, normalizamos las tablas preparándolas para su posterior carga en una bas
 
 El proceso de carga se realizó en Microsoft Fabric utilizando Azure SQL Server y Data Factory. Creamos los cuadernos de extracción en Microsoft Azure Databricks y los almacenamos en nuestro Data Lake. Con Data Factory, configuramos Dataflow para transferir los archivos CSV al servidor de Azure SQL utilizando Power Query.
 
-<video src="source/img/csv_to_sql.mp4" controls title="Title"></video>
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bd5fa622-97b2-4a90-9cb4-51bbbe10834c
+
 
 > ☝️ Podemos ver de forma rápida como Dataflow usa Power Query para leer los archivos csv y luego después de asignar el tipo de columna a cada uno, procedemos a enviarlos a Azure SQL por medio de autenticación en este caso básica server, puerto, usuario, contraseña.
 
 También automatizamos aún más el proceso mediante la creación de un Data Pipeline que ejecuta automáticamente los trabajos necesarios, incluyendo la ejecución de scripts SQL para establecer relaciones, claves primarias y foráneas.
 
-<video src="source/img/auto_csv_sql_server.mp4" controls title="Title"></video>
+
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bc239611-2851-442c-8cb7-3e555c2b8e3a
+
 
 > ☝️ Muy similar a Airflow o cron jobs, Data Pipeline automatiza los procesos que están en los notebooks, Dataflow o datos externos, también aprovechamos su funcionalidad y cargamos unos scripts SQL de forma remota conectandonos a Azure SQL.
 
