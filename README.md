@@ -1,3 +1,5 @@
+![Análisis del mercado de criptomonedas](source/img/banner_proyecto.jpg)
+
 ## Análisis del mercado de criptomonedas
 
 Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosamente seleccionadas para evaluar su potencial de inversión. A continuación, proporcionamos una descripción más detallada de cada criptomoneda, así como la razón por la que fue seleccionada para su análisis. 🚀
@@ -42,4 +44,96 @@ Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosam
 - **Descripción**: GMD es un token de Yield Farming optimizado con una plataforma de agregación de otras aplicaciones. Se utiliza para proporcionar liquidez a la plataforma GMD y recompensar a los usuarios por proporcionar liquidez.
 - **Razón de Elección**: GMD se eligió por su enfoque en yield farming y su atractivo potencial de rendimiento, también por su suministro total es muy bajo y eso lo hace muy atractivo para los inversores.
 
-Este repositorio proporciona un análisis en profundidad de cada una de estas criptomonedas, lo que ayudará en la toma de decisiones informadas sobre inversiones en el mercado de criptomonedas. Esperamos que esta información sea valiosa para su estrategia de inversión. 📈📊
+>#### Este repositorio proporciona un análisis en profundidad de cada una de estas criptomonedas, lo que ayudará en la toma de decisiones informadas sobre inversiones en el mercado de criptomonedas. Esperamos que esta información sea valiosa para su estrategia de inversión. 📈📊
+
+<img src="source/img/banner_mapa_proyecto.png" style="float:right" width="400px"/>
+<br>
+<br>
+
+## **Mapa del proyecto**
+
+| Carpeta                   | Función                   | Recurso           | Video
+|:--------------------------|:----------------------------------------------:|:-------------:|:-------------
+| data                      | Carpeta Raiz  de los datasets en general                              |
+| data/beta                 | Contiene los dataset con una primera ronda de limpieza                |
+| data/launch               | Contiene los dataset con tablas normalizadas a producción             |
+| data/original             | Contiene la extracción de las APIs                    |
+| media                     | Carpeta de Archivos de diseño y visualización de data                  |
+| media/Dashboard.pbix      | Dashboard realizado en Power Bi                   |
+| media/diseño de imagen - CM - CryptoStark.cdr | Diseño de imagen del proyecto                   |
+| media/Dashboard.pbix      | Dashboard realizado en Power Bi                   |
+| source                    | Carpeta de recursos web                   |
+| source/img                | Carpeta de imágenes utilizadas en los archivos .md, .ipynb, web        |
+| source/notas.txt          | Notas importantes para el roadmap del proyecto                   |
+| sql                       | Carpeta de scripts de SQL                   |
+| sql/script_column_type_not_null.sql | Script que prepara columnas para PK y FK              |
+| sql/script_decimal_type.sql | Script para manejar varios decimales              |
+| sql/script_primary_foreign_key.sql | Script para crear claves foraneas y primarias              |
+| .gitignore                | Archivos que ignoramos cargar en github                   |
+| Análisis_exploratorio_de_datos_(EDA).ipynb | EDA realizado en PySpark a través de Microsoft Fabric | [![Análisis_exploratorio_de_datos_(EDA).ipynb](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pX64SoHDioP9rqaU5PdZTqqKGg6WvIQD?usp=sharing) |
+| ETL_cm_coingecko_beta.ipynb | ETL Api de Coingecko |
+| ETL_cm_cryptocompare_beta.ipynb | ETL Api de Crypto Compare |
+| table_normalization.ipynb | Normalización de tablas para SQL |
+<br>
+
+>#### El proceso de EDA está capturado en Colab, puedes ver como funciona PySpark, pandas y matplotlib juntos, sin olvidar que es necesario Java y Hadoop para que funcione sobre el almacenamiento y procesamiento de datos distribuido, puedes ver nuestro análisis y a su vez puedes ver como se hace el montaje de Spark sobre google colab.
+<br>
+
+![Data Engineering](source/img/banner_engineering.jpg)
+
+Nuestro objetivo es tener una solución de ingeniería de datos diseñada para la obtención, limpieza y almacenamiento de datos relacionados con criptomonedas para realizar análisis de inversión a mediano y largo plazo. A continuación, se detallan los principales pasos y consideraciones de este proceso.
+
+## Obtención de Datos 🌐
+
+### Fuente de Datos 📡
+Inicialmente, nos planteamos cómo necesitamos los datos para realizar un análisis de inversión más profundo. Decidimos no utilizar datos de OHLC (Open, High, Low, Close) utilizados comúnmente en el trading, ya que nuestro enfoque es diferente. Utilizamos la API de CoinGecko para obtener datos más amplios.
+
+### Desafíos Iniciales ❗
+Al utilizar la API de CoinGecko, encontramos que el endpoint `/coins/markets` proporciona una sola fila de datos en tiempo real. Cuando recurrimos a un rango histórico con el endpoint `/coins/{id}/market_chart/range`, solo obtenemos tres columnas esenciales: precio, volumen y capitalización de mercado, que no es suficiente para un análisis en profundidad.
+
+### Solución 🛠️
+Para obtener la información necesaria, utilizamos el endpoint `/coins/{id}/history`, que nos permite consultar cada criptomoneda con información detallada limitada a una fecha por extracción. Sin embargo, debido a limitaciones en la API, debemos utilizar un bucle para extraer las fechas necesarias. Comenzamos desde la fecha más antigua disponible para Bitcoin en 2012 y utilizamos un algoritmo diseñado para recopilar estos datos en todas las 10 criptomonedas.
+
+### Tiempo de Extracción ⏳
+El proceso de extracción de datos para las 10 criptomonedas tomó un total de 37 horas debido a las restricciones de la API de CoinGecko. Mientras se extraían los datos, los guardamos como conjuntos de datos CSV en la carpeta `data/original/` del proyecto.
+
+## Limpieza de Datos 🧹
+
+Realizamos una exhaustiva limpieza de los datos para prepararlos para su normalización. Los archivos en esta fase se encuentran en estado beta, listos para ser normalizados. Se crearon conjuntos de datos para precios, información social, desarrolladores e historial de rango para cada criptomoneda.
+<br>
+
+<img src="source/img/data_beta.png" width="200px"/>
+
+## Investigación de Fuentes 📚
+
+Para complementar nuestros datos, llevamos a cabo una investigación exhaustiva sobre las fuentes de información disponibles en el mercado de criptomonedas. Después de un análisis minucioso, encontramos que CryptoCompare es la fuente que proporciona la información más completa de forma gratuita. Sin embargo, solo pudimos recopilar información detallada para Bitcoin y Ethereum, ya que necesitábamos datos sobre la oferta circulante en cada fecha para nuestro análisis.
+
+## Normalización de Datos 📑
+
+Luego, normalizamos las tablas preparándolas para su posterior carga en una base de datos en Azure SQL. Finalmente, generamos ocho archivos CSV listos para ser migrados. Estos archivos representan los datos normalizados para precios, información social, desarrolladores e historial de rango, fecha, bitcoin halvings, suministro circulante, criptomonedas.
+<br>
+
+<video src="source/img/normalizar-tablas.mp4" controls title="Title"></video>
+
+> Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)
+
+## Carga en Azure SQL (SQL Server) ☁️
+
+El proceso de carga se realizó en Microsoft Fabric utilizando Azure SQL Server y Data Factory. Creamos los cuadernos de extracción en Microsoft Azure Databricks y los almacenamos en nuestro Data Lake. Con Data Factory, configuramos Dataflow para transferir los archivos CSV al servidor de Azure SQL utilizando Power Query.
+
+<video src="source/img/csv_to_sql.mp4" controls title="Title"></video>
+
+> ☝️ Podemos ver de forma rápida como Dataflow usa Power Query para leer los archivos csv y luego después de asignar el tipo de columna a cada uno, procedemos a enviarlos a Azure SQL por medio de autenticación en este caso básica server, puerto, usuario, contraseña.
+
+También automatizamos aún más el proceso mediante la creación de un Data Pipeline que ejecuta automáticamente los trabajos necesarios, incluyendo la ejecución de scripts SQL para establecer relaciones, claves primarias y foráneas.
+
+<video src="source/img/auto_csv_sql_server.mp4" controls title="Title"></video>
+
+> ☝️ Muy similar a Airflow o cron jobs, Data Pipeline automatiza los procesos que están en los notebooks, Dataflow o datos externos, también aprovechamos su funcionalidad y cargamos unos scripts SQL de forma remota conectandonos a Azure SQL.
+
+---
+
+Este proyecto de ingeniería de datos es una pieza fundamental para nuestro análisis de inversión en criptomonedas a mediano y largo plazo. Los datos limpios y normalizados nos proporcionan una base sólida para nuestras futuras investigaciones y decisiones de inversión. 🚀
+
+
+#### 
