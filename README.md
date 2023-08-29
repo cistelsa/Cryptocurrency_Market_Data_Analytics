@@ -129,7 +129,8 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 
 También automatizamos aún más el proceso mediante la creación de un Data Pipeline que ejecuta automáticamente los trabajos necesarios, incluyendo la ejecución de scripts SQL para establecer relaciones, claves primarias y foráneas.
 
-<video src="source/img/auto_csv_sql_server.mp4" controls title="Title"></video>
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/27b3bece-165d-48e0-a6c7-802476a3356e
+
 
 > ☝️ Muy similar a Airflow o cron jobs, Data Pipeline automatiza los procesos que están en los notebooks, Dataflow o datos externos, también aprovechamos su funcionalidad y cargamos unos scripts SQL de forma remota conectandonos a Azure SQL.
 
