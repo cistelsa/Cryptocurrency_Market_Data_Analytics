@@ -115,6 +115,7 @@ Para complementar nuestros datos, llevamos a cabo una investigación exhaustiva 
 Luego, normalizamos las tablas preparándolas para su posterior carga en una base de datos en Azure SQL. Finalmente, generamos ocho archivos CSV listos para ser migrados. Estos archivos representan los datos normalizados para precios, información social, desarrolladores e historial de rango, fecha, bitcoin halvings, suministro circulante, criptomonedas.
 <br>
 <br>
+
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/b5f79c74-fccb-44aa-8e54-7cbd850c8080
 
 > Antes de cualquier acción a normalizar tablas siempre hacemos primero un esquema de como podemos hacerlo de la forma más satisfactoria y óptima. <br> - *Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)*
@@ -124,6 +125,7 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 El proceso de carga se realizó en Microsoft Fabric utilizando Azure SQL Server y Data Factory. Creamos los cuadernos de extracción en Microsoft Azure Databricks y los almacenamos en nuestro Data Lake. Con Data Factory, configuramos Dataflow para transferir los archivos CSV al servidor de Azure SQL utilizando Power Query.
 <br>
 <br>
+
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bd5fa622-97b2-4a90-9cb4-51bbbe10834c
 
 
@@ -132,6 +134,7 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 También automatizamos aún más el proceso mediante la creación de un Data Pipeline que ejecuta automáticamente los trabajos necesarios, incluyendo la ejecución de scripts SQL para establecer relaciones, claves primarias y foráneas.
 <br>
 <br>
+
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bc239611-2851-442c-8cb7-3e555c2b8e3a
 
 
