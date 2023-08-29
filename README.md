@@ -113,8 +113,8 @@ Para complementar nuestros datos, llevamos a cabo una investigación exhaustiva 
 Luego, normalizamos las tablas preparándolas para su posterior carga en una base de datos en Azure SQL. Finalmente, generamos ocho archivos CSV listos para ser migrados. Estos archivos representan los datos normalizados para precios, información social, desarrolladores e historial de rango, fecha, bitcoin halvings, suministro circulante, criptomonedas.
 <br>
 
-<video src="source/img/normalizar-tablas.mp4" controls title="Title"></video>
 
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/b5f79c74-fccb-44aa-8e54-7cbd850c8080
 
 > Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)
 
@@ -129,7 +129,8 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 
 También automatizamos aún más el proceso mediante la creación de un Data Pipeline que ejecuta automáticamente los trabajos necesarios, incluyendo la ejecución de scripts SQL para establecer relaciones, claves primarias y foráneas.
 
-https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/27b3bece-165d-48e0-a6c7-802476a3356e
+
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bc239611-2851-442c-8cb7-3e555c2b8e3a
 
 
 > ☝️ Muy similar a Airflow o cron jobs, Data Pipeline automatiza los procesos que están en los notebooks, Dataflow o datos externos, también aprovechamos su funcionalidad y cargamos unos scripts SQL de forma remota conectandonos a Azure SQL.
