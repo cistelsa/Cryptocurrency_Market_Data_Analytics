@@ -469,6 +469,9 @@ df = df.sort_values(['id'], ignore_index=True)
 dataset["circulating_supply"] = df["circulating_supply"]
 
 ```
+
+
+
 ## Key Enabler
 Mensionamos los recursos, librerías, proyectos y aplicaciones que hicieron que este **`Proyecto de Análisis`** fuera posible, agradecemos su existencia y a quienes están detras de cada uno de ellos.
 
