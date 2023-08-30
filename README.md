@@ -91,7 +91,6 @@ Este repositorio contiene un análisis exhaustivo de 10 criptomonedas cuidadosam
 
 Nuestro objetivo es tener una solución de ingeniería de datos diseñada para la obtención, limpieza y almacenamiento de datos relacionados con criptomonedas para realizar análisis de inversión a mediano y largo plazo. A continuación, se detallan los principales pasos y consideraciones de este proceso.
 <br>
-<br>
 
 ## Obtención de Datos 🌐
 
@@ -107,7 +106,6 @@ Para obtener la información necesaria, utilizamos el endpoint `/coins/{id}/hist
 ### - Tiempo de Extracción ⏳
 El proceso de extracción de datos para las 10 criptomonedas tomó un total de 37 horas debido a las restricciones de la API de CoinGecko. Mientras se extraían los datos, los guardamos como conjuntos de datos CSV en la carpeta `data/original/` del proyecto.
 <br>
-<br>
 
 ## Limpieza de Datos 🧹
 
@@ -116,18 +114,15 @@ Realizamos una exhaustiva limpieza de los datos para prepararlos para su normali
 
 <img src="source/img/data_beta.png" width="200px"/>
 <br>
-<br>
 
 ## Investigación de Fuentes 📚
 
 Para complementar nuestros datos, llevamos a cabo una investigación exhaustiva sobre las fuentes de información disponibles en el mercado de criptomonedas. Después de un análisis minucioso, encontramos que CryptoCompare es la fuente que proporciona la información más completa de forma gratuita. Sin embargo, solo pudimos recopilar información detallada para Bitcoin y Ethereum, ya que necesitábamos datos sobre la oferta circulante en cada fecha para nuestro análisis.
 <br>
-<br>
 
 ## Normalización de Tablas 📑
 
 Luego, normalizamos las tablas preparándolas para su posterior carga en una base de datos en Azure SQL. Finalmente, generamos ocho archivos CSV listos para ser migrados. Estos archivos representan los datos normalizados para precios, información social, desarrolladores e historial de rango, fecha, bitcoin halvings, suministro circulante, criptomonedas.
-<br>
 <br>
 
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/b5f79c74-fccb-44aa-8e54-7cbd850c8080
@@ -143,7 +138,6 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 
 El proceso de carga se realizó en Microsoft Fabric utilizando Azure SQL Server y Data Factory. Creamos los cuadernos de extracción en Microsoft Azure Databricks y los almacenamos en nuestro Data Lake. Con Data Factory, configuramos Dataflow para transferir los archivos CSV al servidor de Azure SQL utilizando Power Query.
 <br>
-<br>
 
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bd5fa622-97b2-4a90-9cb4-51bbbe10834c
 
@@ -151,7 +145,6 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 > ☝️ Podemos ver de forma rápida como Dataflow usa Power Query para leer los archivos csv y luego después de asignar el tipo de columna a cada uno, procedemos a enviarlos a Azure SQL por medio de autenticación en este caso básica server, puerto, usuario, contraseña. <br> - *Musica de fondo creada por inteligencia artificial - [https://soundful.com/](https://soundful.com/)*
 
 También automatizamos aún más el proceso mediante la creación de un Data Pipeline que ejecuta automáticamente los trabajos necesarios, incluyendo la ejecución de scripts SQL para establecer relaciones, claves primarias y foráneas.
-<br>
 <br>
 
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/bc239611-2851-442c-8cb7-3e555c2b8e3a
@@ -196,7 +189,9 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 | total_volume_usd  |  Volumen 24 horas en dolar            |
 | total_volume_satoshis |  Volumen 24 horas en satoshis     |
 <br>
+
 ---
+
 <br>
 
 |**dbo.cryptocurrencies**|          | **dbo.crypto_date**| **Tabla de Hechos**         |
@@ -209,7 +204,9 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 | total_supply      |  Suministro total de la criptomoneda | day | Día derivado de date |
 | max_supply        |  Suministro máximo de la criptomoneda | 
 <br>
+
 ---
+
 <br>
 
 |**dbo.crypto_social**|          | **dbo.crypto_current_supply**|         |
@@ -230,7 +227,6 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 
 >Te invitamos a ver el [Análisis_exploratorio_de_datos_(EDA).ipynb](Análisis_exploratorio_de_datos_(EDA).ipynb) para visualizar el informe más completo.
 <br>
-<br>
 
 ## Introducción 🚀
 
@@ -249,7 +245,6 @@ Este informe presenta un análisis detallado de 10 criptomonedas seleccionadas p
 9. Boba Network (boba)
 10. GMD Protocol (gmd)
 <br>
-<br>
 
 ## Extracción de Datos 🌐
 
@@ -257,7 +252,6 @@ Inicialmente, intentamos extraer el suministro circulante de las criptomonedas e
 
 >- Automatizar la extracción en tiempo real, incluyendo el suministro circulante. 
 >- Investigar y obtener datos históricos de suministro circulante.
-<br>
 <br>
 
 ## Análisis de Capitalización de Mercado 💰
@@ -278,7 +272,6 @@ La capitalización de mercado máxima de cada criptomoneda es esencial para nues
 |    ethereum| 571,665,766,496|
 
 > Debemos comprender que esta fué la capitalización de mercado `Market_Cap` en dolares (Total en dolares invertidos en la criptomoneda) máxima, demostraremos con gráficas que esta capitalización tiende a ser superada y multiplicada en el ciclo alcista después del halving de bitcoin.
-<br>
 <br>
 
 ## Análisis de Caída de Precios 📉
@@ -340,7 +333,6 @@ Las cuatro criptomonedas que experimentaron las mayores caídas fueron:
 
 >**Conclusión:** No se sabe a ciencia sierta cual será el rumbo de esta criptomoneda, este analisis es más fundamental que técnico, pero aun así los datos nos demuestran que en mercado bajista recuperó muchas posiciones.
 <br>
-<br>
 
 ## Halving de Bitcoin - Análisis de BTC ⛓️
 
@@ -350,7 +342,6 @@ El evento de halving de Bitcoin es un indicador importante para el próximo cicl
 
 >☝️ Analizando el gráfico anterior podemos darnos cuenta que cada vez que ocurre el evento de halving de bitcoin, es una puerta muy grande para que el ciclo alcista comience, en este proyecto de inversión lo vamos a tener muy en cuenta, se aproxima uno de los eventos de halving para el proximo año y para esta fecha ya debemos tener la mayoría de la inversión acentada.
 <br>
-<br>
 
 ## Halving de Bitcoin - Análisis de XRP 🌐
 
@@ -359,7 +350,6 @@ XRP experimentó una subida muy pequeña a comparación de lo que se esperaba, c
 ![Halving de Bitcoin - XRP](source/img/halving_bitcoin_xrp.png)
 
 >☝️ Ahora analicemos la criptomoneda XRP, podemos darnos cuenta que sucede exactamente lo mismo que bitcoin, pero a diferencia que en el ultimo halving ya ocurrido no pudo superar su máximo histórico, el resultado de la demanda ya estuvo a favor de la cryptomoneda, por lo cual incrementó su valor en pleno ciclo bajista, esperamos mucho de XRP para el próximo ciclo alcista, no alcanzará a Ethereum por su sólido proyecto pero al ser usada en movimientos financieros bancarios muy importantes le espera un gran futuro.
-<br>
 <br>
 
 ## Correlación de Precios de Bitcoin y Ethereum 📊
@@ -373,7 +363,6 @@ En el siguiente gráfico nivelamos los datos de correlación a agosto de 2015 ha
 
 >☝️ Algo muy esperado la correlación de Bitcoin y Ethereum, nos deja varias conclusiones una de ellas es que podemos ver como se repite un patron y es cuando bitcoin sube de precio de forma natural ethereum lo sigue casi de forma inmediata, pero si bitcoin sube por fomo o por noticias impactantes, las inversiones se centran en bitcoin y ethereum baja, pero al pasar los días ethereum reacciona se recupera y sube mucho más porcentaje que bitcoin, esto mismo pasa en las demas cryptomonedas, pero hay que tener en cuenta que cuando baja el bitcoin todas bajan inmediatamente y proporcional a su subida la bajada es mucho mayor en porcentaje que bitcoin.
 <br>
-<br>
 
 ## Mapa de Calor de Correlación de Precios 💥
 
@@ -385,19 +374,16 @@ El mapa de calor revela que algunas criptomonedas tienen correlaciones similares
 
 >☝️ En este mapa de calor vemos correlaciones respecto al precio de Bitcoin y respeto a Ethereum, podemos analizar que hay cryptomonedas que se mueven muy diferente a bitcoin pero más similar a Ethereum, esto es muy normal ya que Ethereum es la representación de las Altcoin, nos damos cuenta que bitcoin es una guía a nivel general por sus ciclos alcistas, pero debemos revisar lo que pasa con Ethereum y nos daremos cuenta que se mueve similar a las otras crypto o mas bien viceversa, pero esto no es todo, debemos estar muy pendiente ya que puede tener muy poca correlación pero no significa que sea por un valor negativo, es el caso de XRP su movimiento ha sido positivo y por esta situación se aleja de la correlación, pero se ven casos negativos por ejemplo Optimism su valor ha ido decreciendo y la correlación alejando, por último vemos a GMD con una correlación baja pero ha sido por sus movimientos extremadamente volátiles pero se ha mantenido de forma paralela al BTC.
 <br>
-<br>
 
 ## EDA TIPS
 **Nuestro EDA fué realizado con Spark, en Microsoft Fabric y como a modo de capacitación o aprendizaje para los más curiosos en Google Colab; allí podemos hacer el montaje del servidor con Hadoop, Java, PySpark, Azure SQL de forma gratuita, puedes ver como funciona en el siguiente video o si quieres ver los Notebooks correr arriba tienes el enlace a Google Colab.**
 
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/5288937e-6d7c-4731-a47e-f210db0750aa
 <br>
-<br>
 
 ## Conclusión General del EDA 📝
 
 Este análisis nos proporciona una base sólida para tomar decisiones de inversión a largo plazo. Continuaremos monitoreando el mercado y actualizando nuestro proyecto con el objetivo de lograr el mejor rendimiento posible. Para aclarar algunas dudas no te pierdas el Storitelling de Data Analysis a continuación: 🚀💎
-<br>
 <br>
 
 ![Data Analysis](source/img/banner_analysis.jpg)
@@ -446,6 +432,13 @@ Enfoquémonos en la inversión en lugar de la especulación. La inversión impli
 
 La inversión en criptomonedas es un viaje personal. Cada inversor tiene metas, tolerancia al riesgo y horizontes de tiempo únicos. Tomar decisiones que se adapten a tu situación personal es esencial.
 
+### 📊 No es una recomendación de Inversión pero:
+
+1. Diversificaremos el top 10 entre Bajo Riesgo (5 criptomonedas) 50%, riego medio (3 criptomonedas) 30% y alto riesgo (2 criptomonedas) 20% restante
+2. Para selecionar las monedas de bajo riesgo nos centramos en su capitalización de mercado, sus movimientos en volumen diario, como la inversión es a largo plazo revisaremos el proyecto que respalda la criptomoneda y si no es BTC revisaremos su comportamiento de correlación respecto al valor de la moneda principal 
+3. Para seleccionar de riesgo medio revisaremos criptomonedas las cuales son de metaverso y videojuegos, Blockchains de capa 2, monedas de yiel farm finanzas que ya están consolidadas, generan rentabilidades orgánicamente y también por medio de interés compuesto que puedes llegar a ver desde el 35% hasta 500%.
+4. Para seleccionar las monedas de alto riesgo **nos vamos a revisar la capitalización de mercado que no supere los 50millones**, miramos que suministro circulante tiene y **la capitalización de mercado totalmente diluido que no supere el doble de la capitalización de mercado**, revisaremos el volumen de movimientos diarios mínimo de 100k, analizar el proyecto que soporta la criptomoneda y por último ver el movimiento de las redes sociales que sea orgánico, congruente y una gran comunidad.
+
 <br>
 
 ---
@@ -474,10 +467,17 @@ df = df.sort_values(['id'], ignore_index=True)
 dataset["circulating_supply"] = df["circulating_supply"]
 
 ```
+## Key Enabler
+Mensionamos los recursos, librerías, proyectos y aplicaciones que hicieron que este **`Proyecto de Análisis`** fuera posible, agradecemos su existencia y a quienes están detras de cada uno de ellos.
+
+<p align=center>
+  <img src="source/img/banner_herramientas.png" alt="herramientas" width="600px" height="auto" />
+</p><br>
+
 
 ## Próxima Actualización
 
-> ### ETL, EDA, Data Visualization en Tiempo real --> (v 1.0.2)
+> #### ETL, EDA, Data Visualization en Tiempo real --> (v 1.0.2)
 
 ## Autor
 <img src="source/img/autor-camilo-ortiz.png" alt="Banner" width="70px" height="auto" /><br> 
