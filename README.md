@@ -470,8 +470,7 @@ dataset["circulating_supply"] = df["circulating_supply"]
 
 ```
 
-https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/89b46249-ce9b-466e-bbbd-def3fc4878dc
-
+https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/d462127d-076f-490d-9e47-c8e6adfab369
 
 
 ## Key Enabler
