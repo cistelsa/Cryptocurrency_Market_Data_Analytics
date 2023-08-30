@@ -379,6 +379,7 @@ El mapa de calor revela que algunas criptomonedas tienen correlaciones similares
 **Nuestro EDA fué realizado con Spark, en Microsoft Fabric y como a modo de capacitación o aprendizaje para los más curiosos en Google Colab; allí podemos hacer el montaje del servidor con Hadoop, Java, PySpark, Azure SQL de forma gratuita, puedes ver como funciona en el siguiente video o si quieres ver los Notebooks correr arriba tienes el enlace a Google Colab.**
 
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/5288937e-6d7c-4731-a47e-f210db0750aa
+
 <br>
 
 ## Conclusión General del EDA 📝
