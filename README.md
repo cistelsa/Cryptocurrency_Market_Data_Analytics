@@ -385,6 +385,7 @@ https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992
 ## Conclusión General del EDA 📝
 
 Este análisis nos proporciona una base sólida para tomar decisiones de inversión a largo plazo. Continuaremos monitoreando el mercado y actualizando nuestro proyecto con el objetivo de lograr el mejor rendimiento posible. Para aclarar algunas dudas no te pierdas el Storitelling de Data Analysis a continuación: 🚀💎
+
 <br>
 
 ![Data Analysis](source/img/banner_analysis.jpg)
