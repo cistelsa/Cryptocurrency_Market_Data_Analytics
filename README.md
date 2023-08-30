@@ -472,6 +472,11 @@ dataset["circulating_supply"] = df["circulating_supply"]
 
 https://github.com/cistelsa/Cryptocurrency_Market_Data_Analytics/assets/17438992/d462127d-076f-490d-9e47-c8e6adfab369
 
+<br>
+
+## Storitelling Data Visualization
+
+### [Dashboard](https://app.fabric.microsoft.com/view?r=eyJrIjoiZGQ2ZGJhMDUtZjRhOC00ZjY3LWI0NWItMzViNTE3Yzg2YzA5IiwidCI6Ijc3ZjhjMzAzLWVmNDgtNDEyZi1iYmI4LTA4OWRlN2I4MmM4YSIsImMiOjR9&embedImagePlaceholder=true&pageName=ReportSection)
 
 ## Key Enabler
 Mensionamos los recursos, librerías, proyectos y aplicaciones que hicieron que este **`Proyecto de Análisis`** fuera posible, agradecemos su existencia y a quienes están detras de cada uno de ellos.
